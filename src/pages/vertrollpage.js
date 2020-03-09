@@ -34,10 +34,10 @@ const StyledVertRollPage = styled.div`
 
 const VertRollPage = () => {
 
-    const [toggle, setToggle] = useState("off");
+    // const [toggle, setToggle] = useState("off");
     const btnClickHandler = () => (
-        // console.log("btn Clicked!")
-        setToggle(toggle === "off" ? "on" : "off")
+        console.log("btn Clicked!")
+        // setToggle(toggle === "off" ? "on" : "off")
 
     )
 

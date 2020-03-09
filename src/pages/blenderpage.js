@@ -47,7 +47,7 @@ const StyledP1 = styled.div`
 
 const BlenderPage = () => {
     // const [bMode, setbMode] = useState("normal");
-    const [flip, setFlip] = useState("A");
+    // const [flip, setFlip] = useState("A");
     // const bModes = ['multiply', 'screen', 'overlay', 'darken', 'lighten', 'color-dodge', 'color-burn', 'difference', 'exclusion', 'luminosity', 'hue', 'saturation', 'color', 'normal'];
 
     // const modesClicker = (selectedMode) => {
@@ -57,10 +57,10 @@ const BlenderPage = () => {
     //     )
     // }
     const flipperHandler = (input) => {
-        // console.log("Flip!", flip, input)
-        return (
-            setFlip(flip === "A" ? "B" : "A")
-        )
+        console.log("Flip!")
+        // return (
+        //     setFlip(flip === "A" ? "B" : "A")
+        // )
     }
     return (
         <StyledP1>

@@ -51,10 +51,10 @@ const StyledP1 = styled.div`
 
 
 const HorizRollPage = () => {
-    const [toggle, setToggle] = useState("off");
+    // const [toggle, setToggle] = useState("off");
     const btnClickHandler = () => (
-        // console.log("btn Clicked!")
-        setToggle(toggle === "off" ? "on" : "off")
+        console.log("btn Clicked!")
+        // setToggle(toggle === "off" ? "on" : "off")
     )
 
     return (
