@@ -22,6 +22,15 @@ const StyledVertRollPage = styled.div`
         background: grey;
         box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
     }
+    .btn-toggle {
+        width: 15vw;
+        height: 3vh;
+        border-radius: 14px;
+        border: 1px solid orangered;
+        color: whitesmoke;
+        background: transparent;
+        box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    }
     svg {
         margin: auto;
         // border: 1px solid red;
@@ -47,7 +56,7 @@ const VertRollPage = () => {
 
         <StyledVertRollPage>
             <AppNav />
-            <button onClick={btnClickHandler}>Toggle Effect</button>
+            <button className="btn-toggle" onClick={btnClickHandler}>Toggle Effect</button>
             <VertRoll toggle={toggle} />
         </StyledVertRollPage>
 

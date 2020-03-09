@@ -28,7 +28,7 @@ const HorizRoll = ({ toggle }) => {
   return (
     <svg viewBox="0 0 600 600" xmlns="https//www.w3.org/2000/svg" width="100%" preserveAspectRatio="none">
 
-      <linearGradient id="alphaLinear">
+      <linearGradient id="horizGrad">
         <stop offset="0%" stopColor="#fff" id="leftstop" />
 
         <stop offset="0%" stopColor="#fff" stopOpacity="1" ref={elem => tailGlitch = elem} />
@@ -39,7 +39,7 @@ const HorizRoll = ({ toggle }) => {
       </linearGradient>
 
       <mask id="Mask">
-        <rect x="-300" y="0" width="1200" height="600" fill="url(#alphaLinear)" />
+        <rect x="-300" y="0" width="1200" height="600" fill="url(#horizGrad)" />
       </mask>
 
       <image className="img-back" xlinkHref={Listen} width="80%" height="80%" />

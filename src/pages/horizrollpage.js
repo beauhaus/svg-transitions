@@ -52,6 +52,15 @@ font-family: 'Josefin Sans', sans-serif;
         border-color: whitesmoke;
         background: transparent;
         box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+        &.btn-toggle {
+            width: 15vw;
+            height: 3vh;
+            border-radius: 14px;
+            color: whitesmoke;
+            background: transparent;
+            box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+            border: 1px solid orangered;
+        }
     }
 `
 
@@ -75,7 +84,7 @@ const HorizRollPage = () => {
                     <p>Simple mask</p>
                 </div>
             </section>
-            <button onClick={btnClickHandler}>Toggle Effect</button>
+            <button className="btn-toggle" onClick={btnClickHandler}>Toggle Effect</button>
             <HorizRoll toggle={toggle} />
         </StyledHorizRollPage>
     )
