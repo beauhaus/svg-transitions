@@ -12,7 +12,7 @@ const StyledP1 = styled.div`
     margin: auto;
     display: grid;
      grid-template-columns: 1fr;
-     grid-template-rows: 8vh 10vh 1fr;
+     grid-template-rows: auto 10vh 1fr;
     justify-items: center;
     background: slategrey;
     font-family: 'Josefin Sans', sans-serif;

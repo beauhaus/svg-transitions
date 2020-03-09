@@ -7,13 +7,17 @@ import AppNav from '../components/appnav'
 
 
 const StyledP1 = styled.div`
-    height: 100vh;
-    overflow: hidden;
-    margin: auto;
-    display: grid;
-    justify-items: center;
-    background: slategrey;
-    font-family: 'Josefin Sans', sans-serif;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+margin: auto;
+display: grid;
+ grid-template-columns: 1fr;
+ grid-template-rows: auto 10vh 1fr;
+justify-items: center;
+background: slategrey;
+font-family: 'Josefin Sans', sans-serif;
+
 .description {
     width: 70vw;
     margin-top: 1vh;

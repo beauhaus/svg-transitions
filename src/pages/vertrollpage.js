@@ -14,6 +14,16 @@ const StyledVertRollPage = styled.div`
     justify-items: center;
     grid-template-rows: 5vh 10vh 1fr 20vh;
     background: #927e89;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: auto;
+    display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: auto 10vh 1fr;
+    justify-items: center;
+    background: slategrey;
+    font-family: 'Josefin Sans', sans-serif;
     button {
         width: 15vw;
         height: 4vh;
