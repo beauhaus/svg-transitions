@@ -3,7 +3,7 @@ import React from 'react';
 
 // import HorizRoll from '../components/horizroll';
 import styled from 'styled-components';
-import AppNav from '../components/appnav'
+// import AppNav from '../components/appnav'
 
 
 const StyledP1 = styled.div`
@@ -62,7 +62,7 @@ const HorizRollPage = () => {
     return (
 
         <StyledP1>
-            <AppNav/>
+            {/* <AppNav/> */}
             <section>
                 <div className="description">
                     <h1>Description</h1>
