@@ -2,7 +2,7 @@
 import React from 'react';
 
 import styled from 'styled-components';
-// import AppNav from '../components/appnav'
+import AppNav from '../components/appnav'
 // import VertRoll from '../components/vertroll';
 
 
@@ -46,7 +46,7 @@ const VertRollPage = () => {
     return (
 
         <StyledVertRollPage>
-            {/* <AppNav /> */}
+            <AppNav />
             <button onClick={btnClickHandler}>Toggle Effect</button>
             {/* <VertRoll toggle={toggle} /> */}
         </StyledVertRollPage>

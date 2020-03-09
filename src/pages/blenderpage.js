@@ -2,7 +2,7 @@
 import React from 'react'
 // import Blender from '../components/blender';
 import styled from 'styled-components';
-// import AppNav from '../components/appnav'
+import AppNav from '../components/appnav'
 
 
 const StyledP1 = styled.div`
@@ -65,7 +65,7 @@ const BlenderPage = () => {
     }
     return (
         <StyledP1>
-            {/* <AppNav /> */}
+            <AppNav />
             <div className="btns-container">
                 <button className="flipper" onClick={flipperHandler}>Flipper</button>
                 {/* {bModes.map((elem, idx) => <button key={idx} onClick={e => modesClicker(elem)}>{elem}</button>)} */}
