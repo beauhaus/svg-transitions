@@ -10,15 +10,14 @@ const StyledIdx = styled.div`
     margin: 0;
     background: linear-gradient( 25deg, #96ada8 0%, #6c837e 100%);
     padding: 10px;
-    
 `;
 
 const IndexPage = () => {
     return (
-<StyledIdx className="styledindex">
-    <AppNav  />
-    <h1>IndexPage</h1>
-</StyledIdx>
+        <StyledIdx className="styledindex">
+            <AppNav />
+            <h1>IndexPage</h1>
+        </StyledIdx>
     )
 }
 

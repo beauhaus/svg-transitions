@@ -1,5 +1,5 @@
-// import React, { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
+// import React from 'react';
 
 // import HorizRoll from '../components/horizroll';
 import styled from 'styled-components';
@@ -53,11 +53,13 @@ const StyledP1 = styled.div`
 
 
 const HorizRollPage = () => {
-    // const [toggle, setToggle] = useState("off");
-    const btnClickHandler = () => (
+    const [toggle, setToggle] = useState("off");
+    const btnClickHandler = () => {
         console.log("btn Clicked!")
-        // setToggle(toggle === "off" ? "on" : "off")
-    )
+        return (
+            setToggle(toggle === "off" ? "on" : "off")
+        )
+    }
 
     return (
 
