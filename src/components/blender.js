@@ -12,7 +12,6 @@ image {
 }
 `
 
-
 const Blender = ({ bMode , flip}) => {
     console.log(">blender: bMode/flip: ", bMode, flip)
     return (

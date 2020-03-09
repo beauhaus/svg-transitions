@@ -1,6 +1,5 @@
-// import React, { useState } from 'react';
-import React from 'react'
-// import Blender from '../components/blender';
+import React, { useState } from 'react';
+import Blender from '../components/blender';
 import styled from 'styled-components';
 import AppNav from '../components/appnav'
 
@@ -47,30 +46,30 @@ const StyledP1 = styled.div`
 
 
 const BlenderPage = () => {
-    // const [bMode, setbMode] = useState("normal");
-    // const [flip, setFlip] = useState("A");
-    // const bModes = ['multiply', 'screen', 'overlay', 'darken', 'lighten', 'color-dodge', 'color-burn', 'difference', 'exclusion', 'luminosity', 'hue', 'saturation', 'color', 'normal'];
+    const [bMode, setbMode] = useState("normal");
+    const [flip, setFlip] = useState("A");
+    const bModes = ['multiply', 'screen', 'overlay', 'darken', 'lighten', 'color-dodge', 'color-burn', 'difference', 'exclusion', 'luminosity', 'hue', 'saturation', 'color', 'normal'];
 
-    // const modesClicker = (selectedMode) => {
-    //     // console.log("btn Clicked!", selectedMode)
-    //     return (
-    //         setbMode(selectedMode)
-    //     )
-    // }
+    const modesClicker = (selectedMode) => {
+        // console.log("btn Clicked!", selectedMode)
+        return (
+            setbMode(selectedMode)
+        )
+    }
     const flipperHandler = (input) => {
         console.log("Flip!")
-        // return (
-        //     setFlip(flip === "A" ? "B" : "A")
-        // )
+        return (
+            setFlip(flip === "A" ? "B" : "A")
+        )
     }
     return (
         <StyledP1>
             <AppNav />
             <div className="btns-container">
                 <button className="flipper" onClick={flipperHandler}>Flipper</button>
-                {/* {bModes.map((elem, idx) => <button key={idx} onClick={e => modesClicker(elem)}>{elem}</button>)} */}
+                {bModes.map((elem, idx) => <button key={idx} onClick={e => modesClicker(elem)}>{elem}</button>)}
             </div>
-            {/* <Blender className="blender" flip={flip} bMode={bMode} /> */}
+            <Blender className="blender" flip={flip} bMode={bMode} />
         </StyledP1>
     )
 };

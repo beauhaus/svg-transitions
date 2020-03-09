@@ -1,28 +1,19 @@
-// import React, { useState } from 'react';
-import React from 'react';
-
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import AppNav from '../components/appnav'
-// import VertRoll from '../components/vertroll';
+import VertRoll from '../components/vertroll';
 
 
 const StyledVertRollPage = styled.div`
-    width: 100vw;
-    height: 100vh;
-    margin: auto;
-    display: grid;
-    justify-items: center;
-    grid-template-rows: 5vh 10vh 1fr 20vh;
-    background: #927e89;
     width: 100%;
     height: 100vh;
     overflow: hidden;
     margin: auto;
     display: grid;
-     grid-template-columns: 1fr;
-     grid-template-rows: auto 10vh 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 10vh 1fr;
     justify-items: center;
-    background: slategrey;
+    background: #927e89;
     font-family: 'Josefin Sans', sans-serif;
     button {
         width: 15vw;
@@ -40,25 +31,24 @@ const StyledVertRollPage = styled.div`
             width: 100%;
         }
     }
-    
 `
 
 
 const VertRollPage = () => {
-
-    // const [toggle, setToggle] = useState("off");
-    const btnClickHandler = () => (
+    const [toggle, setToggle] = useState("off");
+    const btnClickHandler = () => {
         console.log("btn Clicked!")
-        // setToggle(toggle === "off" ? "on" : "off")
-
-    )
+        return (
+            setToggle(toggle === "off" ? "on" : "off")
+        )
+    }
 
     return (
 
         <StyledVertRollPage>
             <AppNav />
             <button onClick={btnClickHandler}>Toggle Effect</button>
-            {/* <VertRoll toggle={toggle} /> */}
+            <VertRoll toggle={toggle} />
         </StyledVertRollPage>
 
     )

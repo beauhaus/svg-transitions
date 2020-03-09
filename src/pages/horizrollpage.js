@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import AppNav from '../components/appnav'
 
 
-const StyledP1 = styled.div`
+const StyledHorizRollPage = styled.div`
 width: 100%;
 height: 100vh;
 overflow: hidden;
@@ -67,7 +67,7 @@ const HorizRollPage = () => {
 
     return (
 
-        <StyledP1>
+        <StyledHorizRollPage>
             <AppNav/>
             <section>
                 <div className="description">
@@ -77,7 +77,7 @@ const HorizRollPage = () => {
             </section>
             <button onClick={btnClickHandler}>Toggle Effect</button>
             <HorizRoll toggle={toggle} />
-        </StyledP1>
+        </StyledHorizRollPage>
     )
 };
 
