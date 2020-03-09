@@ -29,7 +29,7 @@ const AppNav = ({to, linkstyles, linktxt}) => (
     <Link to='/'>home</Link>
     <Link to='/horizrollpage'>horiz roll</Link>
     <Link to='/blenderpage'>blender</Link>
-    <Link to='/simplegradpage'>simplegradpage</Link>
+    <Link to='/vertrollpage'>vert roll</Link>
 </StyledAppNav>
 )
 

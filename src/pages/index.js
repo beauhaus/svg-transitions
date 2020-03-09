@@ -12,10 +12,7 @@ const StyledIdx = styled.div`
     padding: 10px;
     
 `;
-// const activeStyles = {
-//     background: "white",
-//     color: "blue"
-// }
+
 const IndexPage = () => {
     return (
 <StyledIdx className="styledindex">

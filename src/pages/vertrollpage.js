@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import AppNav from '../components/appnav'
-import SimpleGrad from '../components/simplegrad';
+// import VertRoll from '../components/vertroll';
 
 
-const StyledGradPage = styled.div`
+const StyledVertRollPage = styled.div`
     width: 100vw;
     height: 100vh;
     margin: auto;
@@ -32,7 +32,7 @@ const StyledGradPage = styled.div`
 `
 
 
-const SimpleGradPage = () => {
+const VertRollPage = () => {
 
     const [toggle, setToggle] = useState("off");
     const btnClickHandler = () => (
@@ -43,13 +43,13 @@ const SimpleGradPage = () => {
 
     return (
 
-        <StyledGradPage>
+        <StyledVertRollPage>
             <AppNav />
             <button onClick={btnClickHandler}>Toggle Effect</button>
-            <SimpleGrad toggle={toggle} />
-        </StyledGradPage>
+            {/* <VertRoll toggle={toggle} /> */}
+        </StyledVertRollPage>
 
     )
 };
 
-export default SimpleGradPage;
+export default VertRollPage;

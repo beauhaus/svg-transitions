@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import HorizRoll from '../components/horizroll';
+// import HorizRoll from '../components/horizroll';
 import styled from 'styled-components';
 import AppNav from '../components/appnav'
 
@@ -47,7 +47,6 @@ const StyledP1 = styled.div`
         background: transparent;
         box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
     }
-    
 `
 
 
@@ -69,7 +68,7 @@ const HorizRollPage = () => {
                 </div>
             </section>
             <button onClick={btnClickHandler}>Toggle Effect</button>
-            <HorizRoll toggle={toggle} />
+            {/* <HorizRoll toggle={toggle} /> */}
         </StyledP1>
     )
 };
