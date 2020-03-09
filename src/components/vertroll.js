@@ -5,6 +5,7 @@ import { gsap } from "gsap"; //  , Power4, Expo
 
 import School from '../../static/school.jpg'
 import Listen from '../../static/listening.jpg'
+import Glitchy from '../../static/glitchgif.gif'
 
 
 const VertRoll = ({ toggle }) => {
@@ -44,7 +45,19 @@ const VertRoll = ({ toggle }) => {
         <rect x="-300" y="0" width="1200" height="600" fill="url(#vertGrad)" />
       </mask>
 
-      <image className="img-back" xlinkHref={Listen} width="80%" height="80%" />
+      {/* <filter id="vertFilter">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+      <feFlood in="SourceGraphic"  flood-opacity="0.5" flood-color="red" result="flood" />
+  <feOffset in="SourceGraphic" dx="-250" dy="0" result="off" />
+  <feMerge>
+   <feMergeNode in="flood" />
+   <feMergeNode in="off" />
+  </feMerge>
+
+      </filter> */}
+
+      <image className="img-back" xlinkHref={Glitchy} width="80%" height="80%" />
+      <image className="img-front" xlinkHref={School} width="80%" height="80%" style={{ mixBlendMode: 'luminosity' }}/>
       <image className="img-front" xlinkHref={School} width="80%" height="80%" mask="url(#Mask)" />
 
     </svg>
