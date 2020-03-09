@@ -1,5 +1,5 @@
 import React from 'react';
-import AppNav from '../components/appnav'
+// import AppNav from '../components/appnav'
 import '../styles/index.scss'
 import styled from 'styled-components';
 
@@ -16,7 +16,8 @@ const StyledIdx = styled.div`
 const IndexPage = () => {
     return (
 <StyledIdx className="styledindex">
-    <AppNav  />
+    {/* <AppNav  /> */}
+    <h1>IndexPage</h1>
 </StyledIdx>
     )
 }
