@@ -35,8 +35,6 @@ const HorizRoll = ({ toggle }) => {
       height="100%"
       preserveAspectRatio="none">
         
-      {/* viewBox="0 0 300 300" */}
-
         <linearGradient id="horizGrad">
           <stop offset="0%" stopColor="#fff" id="leftstop" />
 

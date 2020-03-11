@@ -32,6 +32,7 @@ const AppNav = ({to, linkstyles, linktxt}) => (
     <Link to='/horizrollpage'>horiz roll</Link>
     <Link to='/blenderpage'>blender</Link>
     <Link to='/vertrollpage'>vert roll</Link>
+    <Link to='/glitchpage'>glitches</Link>
     <a href="https://svg-transitions.netlify.com/">ONLINE</a>
 </StyledAppNav>
 )
