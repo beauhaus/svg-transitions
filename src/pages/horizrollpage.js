@@ -18,30 +18,38 @@ justify-items: center;
 background: slategrey;
 font-family: 'Josefin Sans', sans-serif;
 
-.description {
-    width: 70vw;
-    margin-top: 1vh;
-    margin: 8vh auto 0;
-    border: 1px solid orange;
-    h1 {
-        font-size: 1.2rem;
-        color: whitesmoke;
-        font-weight: 400;
-        text-align: center;
+    .description {
+        width: 70vw;
+        margin-top: 1vh;
+        margin: 8vh auto 0;
+        border: 1px solid orange;
+        h1 {
+            font-size: 1.2rem;
+            color: whitesmoke;
+            font-weight: 400;
+            text-align: center;
+        }
+        p {
+            font-weight: 400;
+            color: #fff;
+        }
     }
-    p {
-        font-weight: 400;
-        color: #fff;
-    }
+.img-container {
+    width: 50vw;
+    height: 50vh;
+    max-width: 700px;
+    min-width: 600px;
+    margin: 5vh auto;
+    background: fuchsia;
+    box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.5);
+    position: relative;
 }
     svg {
-        margin: auto;
-        // border: 1px solid red;
-        height: auto;
-        width: 40vw;
-        image {
-            width: 100%;
-        }
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
     }
     button {
         margin-top: 10px;

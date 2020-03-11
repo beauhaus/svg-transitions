@@ -26,26 +26,37 @@ const HorizRoll = ({ toggle }) => {
 
   }, [toggle])
   return (
-    <svg viewBox="0 0 600 600" xmlns="https//www.w3.org/2000/svg" width="100%" preserveAspectRatio="none">
+    <div className="img-container">
 
-      <linearGradient id="horizGrad">
-        <stop offset="0%" stopColor="#fff" id="leftstop" />
+      <svg 
+      viewBox="0 0 600 600" 
+      xmlns="https//www.w3.org/2000/svg" 
+      width="100%" 
+      height="100%"
+      preserveAspectRatio="none">
+        
+      {/* viewBox="0 0 300 300" */}
 
-        <stop offset="0%" stopColor="#fff" stopOpacity="1" ref={elem => tailGlitch = elem} />
-        <stop offset="5%" stopColor="#000" stopOpacity="1" ref={elem => centerGlitch = elem} />
-        <stop offset="10%" stopColor="#fff" stopOpacity="1" ref={elem => headGlitch = elem} />
+        <linearGradient id="horizGrad">
+          <stop offset="0%" stopColor="#fff" id="leftstop" />
 
-        <stop offset="100%" stopColor="#fff" id="rightstop" />
-      </linearGradient>
+          <stop offset="0%" stopColor="#fff" stopOpacity="1" ref={elem => tailGlitch = elem} />
+          <stop offset="5%" stopColor="#000" stopOpacity="1" ref={elem => centerGlitch = elem} />
+          <stop offset="10%" stopColor="#fff" stopOpacity="1" ref={elem => headGlitch = elem} />
 
-      <mask id="Mask">
-        <rect x="-300" y="0" width="1200" height="600" fill="url(#horizGrad)" />
-      </mask>
+          <stop offset="100%" stopColor="#fff" id="rightstop" />
+        </linearGradient>
 
-      <image className="img-back" xlinkHref={Listen} width="80%" height="80%" />
-      <image className="img-front" xlinkHref={School} width="80%" height="80%" mask="url(#Mask)" />
+        <mask id="Mask">
+          <rect x="-300" y="0" width="1200" height="600" fill="url(#horizGrad)" />
+        </mask>
 
-    </svg>
+        <image className="img-back" xlinkHref={Listen} width="100%" height="100%" preserveAspectRatio="none" />
+        <image className="img-front" xlinkHref={School} width="100%" height="100%" preserveAspectRatio="none" mask="url(#Mask)" />
+
+      </svg>
+    </div>
+
   );
 }
 
