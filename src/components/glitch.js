@@ -74,7 +74,6 @@ const Glitch = ({ toggle }) => {
                     <feTurbulence baseFrequency="0.015" numOctaves="1" result="turbulence_3" />
                     <feDisplacementMap in="SourceGraphic" in2="turbulence_3" scale="10" result="warp" />
                     <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
-
                 </filter>
 
                 <clipPath id="midslice">
@@ -97,7 +96,6 @@ const Glitch = ({ toggle }) => {
                     <text x="46" y="290" >YES</text>
                 </g>
                 <g className="warp-grp-2 top-grp" clip-path="url(#topslice)"  filter="url(#midSliceFilter)">
-                    {/* <path fill="#bcbcbc" d="M0 0h500v500H0z" /> */}
                     <text x="22" y="390" >YES</text>
                 </g>
             </StyledGlitch>

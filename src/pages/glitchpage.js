@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import AppNav from '../components/appnav'
 import Glitch from '../components/glitch';
+import RGBGlitch from '../components/rgbglitch';
 
 
 const StyledGlitchPage = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     margin: auto;
     display: grid;
@@ -69,6 +70,7 @@ const GlitchPage = () => {
             <AppNav />
             <button className="btn-toggle" onClick={btnClickHandler}>Toggle Effect</button>
             <Glitch toggle={toggle} />
+            <RGBGlitch toggle={toggle} />
         </StyledGlitchPage>
 
     )
