@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import AppNav from '../components/appnav'
 import Glitch from '../components/glitch';
 import RGBGlitch from '../components/rgbglitch';
+import BlockGlitch from '../components/blockglitch';
 
 
 const StyledGlitchPage = styled.div`
@@ -71,6 +72,7 @@ const GlitchPage = () => {
             <button className="btn-toggle" onClick={btnClickHandler}>Toggle Effect</button>
             <Glitch toggle={toggle} />
             <RGBGlitch toggle={toggle} />
+            <BlockGlitch toggle={toggle} />
         </StyledGlitchPage>
 
     )
