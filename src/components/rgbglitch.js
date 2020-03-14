@@ -9,7 +9,7 @@ const StyledRGBGlitch = styled.svg`
     text {
         font-size: 200px;
         font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
-        fill: #eee;
+        // fill: #eee;
     }
     #lines {
         rect {
@@ -59,14 +59,14 @@ const RGBGlitch = ({ toggle }) => {
                     <description>right red</description>
                     <feGaussianBlur in="SourceAlpha" stdDeviation="5 0" result="blur" />
                     <feOffset in="blur" dx="10" dy="0" result="offsetBlur" />
-                    <feFlood flood-color="red" flood-opacity="0.5" result="offsetColor" />
+                    <feFlood floodColor="red" floodOpacity="0.5" result="offsetColor" />
                     <feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur" />
                 </filter>
                 <filter id="shft-lt-filter" filterUnits="userSpaceOnUse">
                     <description>right red</description>
                     <feGaussianBlur in="SourceAlpha" stdDeviation="5 0" result="blur" />
                     <feOffset in="blur" dx="-10" dy="0" result="offsetBlur" />
-                    <feFlood flood-color="green" flood-opacity="0.5" result="offsetColor" />
+                    <feFlood floodColor="green" floodOpacity="0.5" result="offsetColor" />
                     <feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur" />
                 </filter>
 
@@ -111,7 +111,7 @@ const RGBGlitch = ({ toggle }) => {
 
                 <text id="blur-txt-1" x="10" y="290" filter="url(#shft-rt-filter)">YES</text>
                 <text id="blur-txt-2" x="10" y="290" filter="url(#shft-lt-filter)">YES</text>
-                <text id="txt-main" clip-path="url(#lines)" x="10" y="290">YES
+                <text id="txt-main"  fill="#fff" clipPath="url(#lines)" x="10" y="290">YES
 </text>
             </StyledRGBGlitch>
 

@@ -4,6 +4,7 @@ import AppNav from '../components/appnav'
 import Glitch from '../components/glitch';
 import RGBGlitch from '../components/rgbglitch';
 import BlockGlitch from '../components/blockglitch';
+import ScreenTxt from '../components/screentxt';
 
 
 const StyledGlitchPage = styled.div`
@@ -57,11 +58,32 @@ const StyledGlitchPage = styled.div`
 
 
 const GlitchPage = () => {
-    const [toggle, setToggle] = useState("off");
-    const btnClickHandler = () => {
+    const [toggleGlitch, setToggleGlitch] = useState("off");
+    const [toggleRGBGlitch, setToggleRGBGlitch] = useState("off");
+    const [toggleBlockGlitch, setToggleBlockGlitch] = useState("off");
+    const [toggleScrnTxt, setToggleScrnTxt] = useState("off");
+    const btnGlitchHandler = () => {
         console.log("btn Clicked!")
         return (
-            setToggle(toggle === "off" ? "on" : "off")
+            setToggleGlitch(toggleGlitch === "off" ? "on" : "off")
+        )
+    }
+    const btnRGBGlitchHandler = () => {
+        console.log("btn Clicked!")
+        return (
+            setToggleRGBGlitch(toggleRGBGlitch === "off" ? "on" : "off")
+        )
+    }
+    const btnBlockGlitchHandler = () => {
+        console.log("btn Clicked!")
+        return (
+            setToggleBlockGlitch(toggleBlockGlitch === "off" ? "on" : "off")
+        )
+    }
+    const btnScrnTxtHandler = () => {
+        console.log("btn Clicked!")
+        return (
+            setToggleScrnTxt(toggleScrnTxt === "off" ? "on" : "off")
         )
     }
 
@@ -69,10 +91,14 @@ const GlitchPage = () => {
 
         <StyledGlitchPage>
             <AppNav />
-            <button className="btn-toggle" onClick={btnClickHandler}>Toggle Effect</button>
-            <Glitch toggle={toggle} />
-            <RGBGlitch toggle={toggle} />
-            <BlockGlitch toggle={toggle} />
+            <button className="btn-toggle" onClick={btnGlitchHandler}>Toggle Effect</button>
+            <Glitch toggle={toggleGlitch} />
+            <button className="btn-toggle" onClick={btnRGBGlitchHandler}>Toggle Effect</button>
+            <RGBGlitch toggle={toggleRGBGlitch} />
+            <button className="btn-toggle" onClick={btnBlockGlitchHandler}>Toggle Effect</button>
+            <BlockGlitch toggle={toggleBlockGlitch} />
+            <button className="btn-toggle" onClick={btnScrnTxtHandler}>Toggle Effect</button>
+            <ScreenTxt toggle={toggleScrnTxt} />
         </StyledGlitchPage>
 
     )

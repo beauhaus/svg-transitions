@@ -9,13 +9,9 @@ const StyledBlockGlitch = styled.svg`
     text {
         font-size: 200px;
         font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
-        fill: #eee;
+        // fill: #eee;
     }
-   
-       
-       #txt-main {
-          fill: #fff;
-       }
+    
 `;
 
 const BlockGlitch = ({ toggle }) => {
@@ -50,7 +46,6 @@ const BlockGlitch = ({ toggle }) => {
                 preserveAspectRatio="none">
                 <path id="bg" fill="slategrey" d="M0 0h500v500H0z" width="100%" height="100%" />
 
-                <path id="bg" fill="slategrey" d="M0 0h500v500H0z" width="100%" height="100%" />
 
                 <filter id="shft-chunk-rt-filter" filterUnits="userSpaceOnUse">
                     <feOffset dx="10" dy="0" />
@@ -72,18 +67,18 @@ const BlockGlitch = ({ toggle }) => {
                     <rect x="0" y="270" height="4" width="100%" />
                 </clipPath>
 
-                <text id="txt-main" fill="#fff" x="10" y="290">YES</text>
+                <text id="txt-main"  fill="#fff" x="10" y="290">YES</text>
 
-                <g filter="url(#shft-chunk-rt-filter)" clip-path="url(#chunk-top)">
+                <g filter="url(#shft-chunk-rt-filter)" clipPath="url(#chunk-top)">
                     <rect x="0" y="0" width="100%" height="100%" fill="slategrey" />
                     <text fill="#fff" x="10" y="290">YES</text>
                 </g>
-                <g filter="url(#shft-chunk-lt-filter)" clip-path="url(#chunk-mid)">
+                <g filter="url(#shft-chunk-lt-filter)" clipPath="url(#chunk-mid)">
                     <rect x="0" y="0" width="100%" height="100%" fill="slategrey" />
                     <text fill="#fff" x="10" y="290">YES</text>
                 </g>
 
-                <g filter="url(#shft-chunk-rt-bot-filter)" clip-path="url(#chunk-bot)" >
+                <g filter="url(#shft-chunk-rt-bot-filter)" clipPath="url(#chunk-bot)" >
                     <rect x="0" y="0" width="100%" height="100%" fill="slategrey" />
                     <text fill="#fff" x="10" y="290" >YES</text>
                 </g>
