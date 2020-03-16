@@ -141,14 +141,14 @@ const ScrnTxt = ({ toggle }) => {
  <rect x="0" y="300" />
 </clipPath>
 
-<g clip-path="url(#lines-scrntxt-1)" >
+<g clipPath="url(#lines-scrntxt-1)" >
  <text id="txt-green" x="20" y="280" filter="url(#filt-green)">YES</text>
  <text id="txt-red" x="20" y="280" filter="url(#filt-red)">YES</text>
  <text id="txt-yellow" x="20" y="280" filter="url(#filt-yellow)">YES</text>
 </g>
 
 <text id="txt-main" x="20" y="280" filter="url(#blur)" >YES</text> 
-<text id="txt-green-overlay" x="20" y="280" fill="#48ff00" fill-opacity="0.2" filter="url(#blur)"  >YES</text>
+<text id="txt-green-overlay" x="20" y="280" fill="#48ff00" fillOpacity="0.2" filter="url(#blur)"  >YES</text>
  
 
 </StyledScrnTxt>

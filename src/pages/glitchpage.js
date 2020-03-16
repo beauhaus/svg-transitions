@@ -5,6 +5,8 @@ import Glitch from '../components/glitch';
 import RGBGlitch from '../components/rgbglitch';
 import BlockGlitch from '../components/blockglitch';
 import ScreenTxt from '../components/screentxt';
+import ScreenLoRes from '../components/scrnlores';
+import RetroScrnTxt from '../components/retroscrntxt';
 
 
 const StyledGlitchPage = styled.div`
@@ -44,6 +46,30 @@ const StyledGlitchPage = styled.div`
         box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.5);
         position: relative;
     }
+    .lores-container {
+        width: 90vw;
+        height: 60vh;
+        max-width: 1000px;
+        min-width: 800px;
+        margin: 5vh auto;
+        background: yellow;
+        box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.5);
+        position: relative;
+    }
+    .retrotxt-container {
+        width: 90vw;
+        height: 60vh;
+        max-width: 1000px;
+        min-width: 800px;
+        margin: 5vh auto;
+        background: fuchsia;
+        box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.5);
+        position: relative;
+        text {
+            font-size: 200px;
+           font-family: "Time", serif;
+           }
+    }
     svg {
         top: 0;
         bottom: 0;
@@ -62,6 +88,9 @@ const GlitchPage = () => {
     const [toggleRGBGlitch, setToggleRGBGlitch] = useState("off");
     const [toggleBlockGlitch, setToggleBlockGlitch] = useState("off");
     const [toggleScrnTxt, setToggleScrnTxt] = useState("off");
+    const [toggleScrnLoRes, setToggleScrnLoRes] = useState("off");
+    const [toggleRetroScrnTxt, setToggleRetroScrnTxt] = useState("off");
+
     const btnGlitchHandler = () => {
         console.log("btn Clicked!")
         return (
@@ -86,6 +115,19 @@ const GlitchPage = () => {
             setToggleScrnTxt(toggleScrnTxt === "off" ? "on" : "off")
         )
     }
+    
+    const btnScrnLoResHandler = () => {
+        console.log("btn Clicked!")
+        return (
+            setToggleScrnLoRes(toggleScrnLoRes === "off" ? "on" : "off")
+        )
+    }
+    const btnRetroScrnTxtHandler = () => {
+        console.log("btn Clicked!")
+        return (
+            setToggleRetroScrnTxt(toggleRetroScrnTxt === "off" ? "on" : "off")
+        )
+    }
 
     return (
 
@@ -98,7 +140,12 @@ const GlitchPage = () => {
             <button className="btn-toggle" onClick={btnBlockGlitchHandler}>Toggle Effect</button>
             <BlockGlitch toggle={toggleBlockGlitch} />
             <button className="btn-toggle" onClick={btnScrnTxtHandler}>Toggle Effect</button>
-            <ScreenTxt toggle={toggleScrnTxt} />
+            <ScreenTxt toggle={toggleScrnTxt} />  
+            <button className="btn-toggle" onClick={btnScrnLoResHandler}>Toggle Effect</button>
+            <ScreenLoRes toggle={toggleScrnLoRes} />
+
+            <button className="btn-toggle" onClick={btnRetroScrnTxtHandler}>Toggle Effect</button>
+            <RetroScrnTxt toggle={toggleRetroScrnTxt} />
         </StyledGlitchPage>
 
     )
