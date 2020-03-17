@@ -76,11 +76,30 @@ const StyledGlitchPage = styled.div`
         left: 0;
         right: 0;
         position: absolute;
-        .img-back {
-            filter: grayscale(1);
-        }
+        // .img-back {
+        //     filter: grayscale(1);
+        // }
     }
+    .txt-svg {
+        // mix-blend-mode: lighten;
+        // mix-blend-mode: overlay;
+// mix-blend-mode: darken;
+// mix-blend-mode: screen;  //✅
+// mix-blend-mode: color-dodge;  //✅✅
+// mix-blend-mode: color-burn; 
+// mix-blend-mode: difference; //✅✅
+mix-blend-mode: exclusion; //✅
+
+// mix-blend-mode: luminosity;
+// mix-blend-mode: hue;
+// mix-blend-mode: saturation; //✅cool
+// mix-blend-mode: color;
+    }
+   
 `
+
+
+
 
 
 const GlitchPage = () => {
