@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-// import { gsap } from "gsap"; //  , Power4, Expo
+import { gsap, Power1 } from "gsap"; //  , Power4, Expo
 import styled from 'styled-components';
 
 // import School from '../../static/school.jpg'
@@ -17,23 +17,37 @@ const StyledBlockGlitch = styled.svg`
 const BlockGlitch = ({ toggle }) => {
     console.log("from slider: toggle=", toggle)
 
-    //   let tailGlitch = useRef(null) // 0%
-    //   let centerGlitch = useRef(null) // 10%
-    //   let headGlitch = useRef(null) // 20%
+    let chunkMid = useRef(null)
+    let chunkTop = useRef(null)
+    let chunkBot = useRef(null)
+  
 
-    //   useEffect(() => {
+      useEffect(() => {
+          console.log("Chunk", chunkMid)
 
-    //     gsap.set(tailGlitch, { attr: { 'offset': '0%' } })
-    //     gsap.set(centerGlitch, { attr: { 'offset': '5%' } })
-    //     gsap.set(headGlitch, { attr: { 'offset': '10%' } })
+        gsap.set(chunkTop, { x:0})
+        gsap.set(chunkMid, { x:0})
+        gsap.set(chunkBot, { x:0})
+    
 
-    //     const tl = gsap.timeline({ defaults: { delay: 0 } })
-    //     tl.to(headGlitch, { duration: 4, attr: { 'offset': '100%' } })
-    //       .to(centerGlitch, { duration: 4, attr: { 'offset': '95%' } }, '-=4')
-    //       .to(tailGlitch, { duration: 4, attr: { 'offset': '90%' } }, '-=4')
+        const tl = gsap.timeline({ defaults: { delay: 0 } })
+        tl
+        // .to(chunkMid, { duration: 1, x: '30', ease:Power1.easeInOut })
+        .to(chunkMid, { duration: 0.04, x: 10 })
+        .to(chunkMid, { duration: 0.04, x: -20 })
+            .to(chunkBot, { duration: 0.04, x: -30 })
+            .to(chunkTop, { duration: 0.04, x: -20 })
+            .to(chunkTop, { duration: 0.04, x: 10 })
+            .to(chunkMid, { duration: 0.04, x: 0 })
+            .to(chunkTop, { duration: 0.04, x: 0 })
+            .to(chunkBot, { duration: 0.04, x: -50 })
+            .to(chunkBot, { duration: 0.04, x: 10 })
+            .to(chunkBot, { duration: 0.04, x: 0 })
+            
+           
 
 
-    //   }, [toggle])
+      }, [toggle])
     return (
         <div className="img-container">
 
@@ -50,18 +64,13 @@ const BlockGlitch = ({ toggle }) => {
                 <filter id="shft-chunk-rt-filter" filterUnits="userSpaceOnUse">
                     <feOffset dx="10" dy="0" />
                 </filter>
-                <filter id="shft-chunk-lt-filter" filterUnits="userSpaceOnUse">
-                    <feOffset dx="-10" dy="0" />
-                </filter>
-                <filter id="shft-chunk-rt-bot-filter" filterUnits="userSpaceOnUse">
-                    <feOffset dx="15" dy="29" />
-                </filter>
+               
 
                 <clipPath id="chunk-top">
                     <rect x="0" y="170" height="5" width="100%" />
                 </clipPath>
                 <clipPath id="chunk-mid">
-                    <rect x="0" y="200" height="20" width="100%" />
+                    <rect x="0" y="200" height="20" width="100%"  />
                 </clipPath>
                 <clipPath id="chunk-bot">
                     <rect x="0" y="270" height="4" width="100%" />
@@ -69,16 +78,16 @@ const BlockGlitch = ({ toggle }) => {
 
                 <text id="txt-main"  fill="#fff" x="10" y="290">YES</text>
 
-                <g filter="url(#shft-chunk-rt-filter)" clipPath="url(#chunk-top)">
+                <g  clipPath="url(#chunk-top)" ref={elem => chunkTop = elem}>
                     <rect x="0" y="0" width="100%" height="100%" fill="slategrey" />
                     <text fill="#fff" x="10" y="290">YES</text>
                 </g>
-                <g filter="url(#shft-chunk-lt-filter)" clipPath="url(#chunk-mid)">
+                <g clipPath="url(#chunk-mid)" ref={elem => chunkMid = elem}>
                     <rect x="0" y="0" width="100%" height="100%" fill="slategrey" />
                     <text fill="#fff" x="10" y="290">YES</text>
                 </g>
 
-                <g filter="url(#shft-chunk-rt-bot-filter)" clipPath="url(#chunk-bot)" >
+                <g clipPath="url(#chunk-bot)"  ref={elem => chunkBot = elem}>
                     <rect x="0" y="0" width="100%" height="100%" fill="slategrey" />
                     <text fill="#fff" x="10" y="290" >YES</text>
                 </g>
